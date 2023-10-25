@@ -1,0 +1,49 @@
+.addTask {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        min-width: 100px;
+        width: 100%;
+        font-size: $fontSizeBigger;
+    }
+
+    &__input {
+        height: 40px;
+        margin-top: 10px;
+        outline: none;
+        padding-left: 5px;
+
+
+        &:focus {
+            border: 1px solid getColor("secondary");
+        }
+    }
+
+    &__btn {
+        width: 100px;
+        height: 40px;
+        padding: 0 5px;
+        border-radius: 0;
+        background-color: getColor("secondary");
+        transition: $transBgColor, $transColor;
+
+        &:hover,
+        &:focus {
+            background-color: darken(getColor("secondary"), 20%);
+            color: getColor("third");
+            cursor: pointer;
+        }
+    }
+}
+
+hr {
+    color: getColor("secondary");
+}

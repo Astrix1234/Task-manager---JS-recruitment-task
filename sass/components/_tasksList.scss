@@ -1,0 +1,70 @@
+.tasksList {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__item {
+        border: 1px solid getColor("third");
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        &--done {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+
+    &__text {
+        max-width: 600px;
+        overflow-x: auto;
+        font-size: $fontSizeBigger;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+    &__btnDelate,
+    &__btnEdit,
+    &__btnDone {
+        padding: 2px 5px;
+        border-radius: 0;
+        background-color: getColor("secondary");
+        transition: $transBgColor, $transColor;
+
+        &:hover,
+        &:focus {
+            background-color: darken(getColor("secondary"), 20%);
+            color: getColor("third");
+            cursor: pointer;
+        }
+
+        &:disabled {
+            background-color: darken(getColor("secondary"), 20%);
+            color: getColor("third");
+
+        }
+    }
+
+    &__btnDone--unvisitable {
+        opacity: 0.4;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
+    &__btnEdit--unvisitable {
+        opacity: 0.4;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
+}

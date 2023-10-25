@@ -1,0 +1,19 @@
+.bodyMainPage {
+  font-family: $fontFamilyMain;
+  color: getColor('third');
+  background-color: getColor('primary');
+}
+
+.container {
+  padding: 0 15px;
+  min-width: 320px;
+  max-width: 380px;
+  margin: 0 auto;
+
+}
+
+@media #{$tabletDesktop} {
+  .container {
+    max-width: 760px;
+  }
+}

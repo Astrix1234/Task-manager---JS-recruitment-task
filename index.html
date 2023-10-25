@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasks manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css"
+    integrity="sha512-bhYgu+LnK6ZXsq18JjhqqzZjnw4GzgCe6s34JBw09tQZ9oFC5tdSlLJW/7ZCf9EXuepe6tnQW57X8z3DKnsAGg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="css/main.min.css" rel="stylesheet" />
+</head>
+
+<body class="bodyMainPage">
+  <header>
+    <div class="container">
+      <form class="addTask">
+        <label class="addTask__label" for="task">Task:
+          <input class="addTask__input" type="text" id="task">
+        </label>
+        <button class="addTask__btn" type="submit">Add task</button>
+      </form>
+      <hr>
+      <hr>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <ul class="tasksList">
+      </ul>
+    </div>
+  </section>
+  <section>
+    <div class="backdrop is-hidden">
+      <form class="edit">
+        <button class="edit__btn-close" type="button">X</button>
+        <label class="edit__label" for="textarea">
+          <textarea class="edit__textarea" name="edit-task" id="textarea"></textarea>
+        </label>
+        <button class="edit__btn" type="submit">Edit task</button>
+      </form>
+    </div>
+  </section>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
